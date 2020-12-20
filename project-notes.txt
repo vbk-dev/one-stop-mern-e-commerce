@@ -1,0 +1,65 @@
+==============================================================================================
+            One Stop E-Commerce MERN Application
+==============================================================================================
+
+# Key Features
+	* Payment Gateway
+	* Genrating invoce pdf
+	* Shopping Cart
+	* Placing Orders & order history
+	* Product Reviews by other customers
+	* Login, Registration and Reset Password Customer
+	* Admin adding, updating and deleting products
+
+# Modules
+	1. Authentication
+	2. Products
+	3. Order
+	4. Reviews
+	5. Customer
+	6. Invoice
+	7. Payment Gateway
+
+# Module Described
+	1. Authentication
+		-> Admin - Login & reset password
+		-> Customer - Login, Registration & reset password
+
+	2. Products
+		-> Creating, update & deleting
+		-> Fetching product list
+		-> Fetching single product
+		-> filtering products
+
+	3. Order
+		-> Placing Orders
+		-> Order History
+		-> Updaing delivery status
+
+	4. Reviews
+		-> Creat, update, delete reating
+		-> fetching all ratings for a product
+
+	5. Customer
+		-> Profile
+		-> Adding, updating, deleting Address
+
+	6. Invoice
+		-> Generating Invoice for orders
+
+	7. Payment Gateway
+		-> Adding payment gateway for online payments
+
+# Model's Schema
+	1. Admin
+		firstName, LastName, email, hashedPassword, status, resetToken
+	2. Customer
+		firstName, LastName, email, hashedPassword, Address{tag, AddressSchema}, status, resetToken
+	3. Address
+		AddressLineOne, AddressLineTwo, landmark, city, state, pincode
+	3. Product
+		name, brand, image, category, description, rating, price, stockCount, [ReviewSchema], createdBy(AdminID)
+	4. Rating
+		title, rating, comment, createdBy(CustomerSchema)
+	5. Orders
+		Will be added later
